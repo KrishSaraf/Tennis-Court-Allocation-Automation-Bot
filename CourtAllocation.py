@@ -158,17 +158,18 @@ def remove_duplicates_keep_newest(df):
     return df_unique
 
 def run_allocation_process():
-    priority_members = [
-    '@Oomint', '@thiriiiiiii', '@garg0003', '@ujjwal24agarwal', '@ArttuHannila', '@aribruhhh', 
-    '@atsh1220', '@jingjonglingmong', '@SwatowAnthony', '@paella_ella', '@Ananya_Jayanty', 
-    '@aladynnn', '@vverawen', '@rohanR25', '@alexwpribadi', '@KrishSaraf', '@jonnyquek',
-    '@utkarsh24agarwal', '@arav_behl', '@MatteZech', '@Vthoon', '@me', '@hyobin78', 
-    '@annabelqi1028', '@boyabyy', '@pterra2004', '@ar_ya_xx', '@ashfuton', '@AbhirajGupta', 
-    '@Benjamintdk', '@kaikotaku', '@pinkfrosteddonut', '@anneliese31220', '@minhthepham', 
-    '@Jk_Brendan', '@christinafujiapple', '@Gushi_sienn', '@salz_bonnie','@PRASHANTAG017','@nardogg'
-]
+    priority_members=[] # Add all the telegram ids of the people given priority access
+#     priority_members = [
+#     '@Oomint', '@thiriiiiiii', '@garg0003', '@ujjwal24agarwal', '@ArttuHannila', '@aribruhhh', 
+#     '@atsh1220', '@jingjonglingmong', '@SwatowAnthony', '@paella_ella', '@Ananya_Jayanty', 
+#     '@aladynnn', '@vverawen', '@rohanR25', '@alexwpribadi', '@KrishSaraf', '@jonnyquek',
+#     '@utkarsh24agarwal', '@arav_behl', '@MatteZech', '@Vthoon', '@me', '@hyobin78', 
+#     '@annabelqi1028', '@boyabyy', '@pterra2004', '@ar_ya_xx', '@ashfuton', '@AbhirajGupta', 
+#     '@Benjamintdk', '@kaikotaku', '@pinkfrosteddonut', '@anneliese31220', '@minhthepham', 
+#     '@Jk_Brendan', '@christinafujiapple', '@Gushi_sienn', '@salz_bonnie','@PRASHANTAG017','@nardogg'
+# ] 
 
-    rallyData = process_rally_data('/Users/krishsaraf/Downloads/Tennis Club/Week 13 Rally Registration Form (Responses).xlsx', priority_members)
+    rallyData = process_rally_data('path to your excel', priority_members)
     rallyData=remove_duplicates_keep_newest(rallyData)
 
     session_column = 'Which session would you like to attend? (can select multiple, you\'ll be allocated ONE based on availability)'
