@@ -1,25 +1,26 @@
 # 🎾 Tennis Code Allocation Automation Bot
 
-An algorithm for automated tennis court allocation for members using a constraint satisfaction technique, reducing manual time by over 90% each week. This system processes member registration data, allocates courts based on skill levels and priorities, and outputs final groupings for each session automatically.
+An algorithm for automated tennis court allocation for members using a constraint satisfaction technique, reducing manual time by over 90% each week compared to last year. This system processes member registration data, allocates courts based on skill levels and priorities, and outputs final groupings for each session automatically.
 
 ## How to Use
 
 1. Download your week's registration file (e.g., `Week 13 Rally Registration Form (Responses).xlsx`).
+2. Update priority_members with the Telegram ids of the priority members.
 
-2. Open the Python script(CourtAllocation.py) and update the file path inside the code:
+3. Open the Python script(CourtAllocation.py) and update the file path inside the code:
    - Find this line: 
      ```python
      rallyData = process_rally_data('.xlsx path', priority_members)
      ```
    - Replace the path with your own week's Excel file location if different.
 
-3. Run the script: CourtAllocation.py
+4. Run the script: CourtAllocation.py
 
-4. Follow on-screen prompts:
+5. Follow on-screen prompts:
    - Specify if any session has Coaching.
    - Enter the number of courts available for each session.
 
-5. Outputs generated:
+6. Outputs generated:
    - Court allocation text files for each session (e.g., `Session_A_Court_Allocation.txt`).
    - `Ungrouped_Players.txt` showing players who couldn't be allocated.
 
